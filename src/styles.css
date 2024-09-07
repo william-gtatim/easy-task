@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top left, #181023, #0b0519);
+    color: #c3b3d8;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main {
+    width: 90%;
+    max-width: 50rem;
+    margin: 2.5rem auto;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2rem;
+}
+
+#users {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    overflow: auto;
+}
+
+#fallback {
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin: 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    main {
+        margin: 4rem auto;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    #users {
+        flex-direction: column;
+    }
+
+    #fallback {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+}
